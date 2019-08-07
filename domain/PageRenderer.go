@@ -26,10 +26,6 @@ func HTMLRender(w http.ResponseWriter, r *http.Request) {
 func CreateResume() repo.ResumeStruct {
 	var Res repo.ResumeStruct
 
-	prog1 := repo.ProgEnvs{Env: "Go, Python, C++, Java, Not HTML"}
-	prog2 := repo.ProgEnvs{Env: "iOS, MacOS"}
-	Res.Prog = append(Res.Prog, prog1, prog2)
-
 	Res.Prog = Res.AddProg()
 	Res.Mathexp = Res.AddMath()
 	Res.Prof = Res.AddProfessional()
