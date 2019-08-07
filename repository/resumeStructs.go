@@ -3,9 +3,9 @@ package repository
 // ResumeStruct holds template values for resume
 type ResumeStruct struct {
 	Prog    []ProgEnvs
-	Mathexp *[]MathExp
-	Prof    *[]ProfExp
-	Educ    *[]Education
+	Mathexp []MathExp
+	Prof    []ProfExp
+	Educ    []Education
 }
 
 // ProgEnvs lists programming environments
@@ -32,16 +32,28 @@ type Education struct {
 	Dates  string
 }
 
+// AddProg appends instances of programming experience to the resume
+func (r *ResumeStruct) AddProg() []ProgEnvs {
+	var Pro []ProgEnvs
+	prog1 := ProgEnvs{Env: "Go, Python, C++, Java, Not HTML"}
+	prog2 := ProgEnvs{Env: "iOS, MacOS"}
+	Pro = append(Pro, prog1, prog2)
+	return Pro
+}
+
 // AddMath appends instances of math experience to the resume
-func (r *ResumeStruct) AddMath() {
+func (r *ResumeStruct) AddMath() []MathExp {
+	var M []MathExp
 	math1 := MathExp{Math: "Bayesian Statistics"}
 	math2 := MathExp{Math: "Calculus I, II"}
 	math3 := MathExp{Math: "Linear Algebra"}
-	*r.Mathexp = append(*r.Mathexp, math1, math2, math3)
+	M = append(M, math1, math2, math3)
+	return M
 }
 
 // AddProfessional appends instances of work experience to the resume
-func (r *ResumeStruct) AddProfessional() {
+func (r *ResumeStruct) AddProfessional() []ProfExp {
+	var Pro []ProfExp
 	prof1 := ProfExp{
 		Company: "Genius - Apple, Inc.",
 		Dates:   "April 2017 - Present",
@@ -66,11 +78,13 @@ func (r *ResumeStruct) AddProfessional() {
 			"Coordinate EH&S compliance, corporate facilities liaison, responsible for all DOT/IATA shipping and receiving.",
 		},
 	}
-	*r.Prof = append(*r.Prof, prof1, prof2, prof3)
+	Pro = append(Pro, prof1, prof2, prof3)
+	return Pro
 }
 
 // AddEducation appends instances of education to the resume
-func (r *ResumeStruct) AddEducation() {
+func (r *ResumeStruct) AddEducation() []Education {
+	var Ed []Education
 	educ1 := Education{
 		School: "University of Washington",
 		Topics: "B.S. Computer Science and Software Engineering",
@@ -96,5 +110,6 @@ func (r *ResumeStruct) AddEducation() {
 		Topics: "Private Pilot Certificate",
 		Dates:  "2011",
 	}
-	*r.Educ = append(*r.Educ, educ1, educ2, educ3, educ4, educ5)
+	Ed = append(Ed, educ1, educ2, educ3, educ4, educ5)
+	return Ed
 }
