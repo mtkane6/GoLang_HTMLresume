@@ -15,7 +15,7 @@ func errorCheck(e error) {
 
 // HTMLRender reads the html file and ioWriter writes to localhost:8080
 func HTMLRender(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("./repository/resume.html")
+	tmpl, err := template.ParseFiles("./repository/resumeTemplate.html")
 	errorCheck(err)
 	Resume := CreateResume()
 	tmpl.Execute(w, Resume)
