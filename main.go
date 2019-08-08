@@ -4,5 +4,4 @@ import "./api"
 
 func main() {
 	api.BeginServer()
-
 }
