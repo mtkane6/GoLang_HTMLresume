@@ -66,7 +66,9 @@ func (r *ResumeStruct) AddProfessional() []ProfExp {
 	prof2 := ProfExp{
 		Company: "Software Engineer Intern",
 		Duties: []string{
+			"Experienced agile development process with scrum meetings and story boards.",
 			"Developed web app weather microservice using Go, Docker, Jenkins, and PostGres.",
+			"Utilized GitFlow to control project development progress.",
 			"Presented to team, as well as University colloquium.",
 		},
 	}
