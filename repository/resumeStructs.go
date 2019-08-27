@@ -55,25 +55,28 @@ func (r *ResumeStruct) AddMath() []MathExp {
 func (r *ResumeStruct) AddProfessional() []ProfExp {
 	var Pro []ProfExp
 	prof1 := ProfExp{
-		Company: "Genius - Apple, Inc.",
-		Dates:   "April 2017 - Present",
+		Company: "Eagle View- Software Engineer Intern",
 		Duties: []string{
-			"Proficient with MacOS and iOS platforms, technical troubleshooting.",
-			"Average 50 Genius bar appointments per week; Physical repairs of iPhone and Mac.",
-			"Promoted from Technical Specialist to Technical Expert to Genius; Train others the same.",
-		},
-	}
-	prof2 := ProfExp{
-		Company: "Software Engineer Intern",
-		Duties: []string{
-			"Experienced agile development process with scrum meetings and story boards.",
-			"Developed web app weather microservice using Go, Docker, Jenkins, and PostGres.",
-			"Utilized GitFlow to control project development progress.",
+			"Developed web app microservice using Go (GoLang), SQL, PostGres; Domain Driven Design; Echo" +
+				"web framework, Testify with 91% coverage, GORM object relational mapping.",
+			"Deployed and tested using Docker, Jenkins, Amazon Web Services (AWS).",
+			"Utilized agile process with daily standup presentations, JIRA board, GitHub and GitFlow.",
 			"Presented to team, as well as University colloquium.",
 		},
 	}
+	prof2 := ProfExp{
+		Company: "Apple Inc.- Mac Genius",
+		Dates:   "April 2017 - Present",
+		Duties: []string{
+			"Promoted from Technical Specialist, Technical Expert, currently Mac Genius.",
+			"Proficient with MacOS and iOS platforms, technical troubleshooting.",
+			"Average 100 Genius bar appointments per week; Physical repairs of iPhone and Mac.",
+			"Train and mentor both new and existing colleagues alike.",
+		},
+	}
+
 	prof3 := ProfExp{
-		Company: "Biotech Lab Manager - Celgene",
+		Company: "Celgene- Biotech Lab Manager",
 		Dates:   "Feb 2016 - March 2017",
 		Duties: []string{
 			"Organized, negotiated, purchased contracts for consumables, lab capital equipment, and service agreements.",
@@ -89,8 +92,8 @@ func (r *ResumeStruct) AddEducation() []Education {
 	var Ed []Education
 	educ1 := Education{
 		School: "University of Washington",
-		Topics: "B.S. Computer Science and Software Engineering",
-		Dates:  "2020 Grad.",
+		Topics: "B.S. Computer Science",
+		Dates:  "March 2020 Grad.",
 	}
 	educ2 := Education{
 		School: "Bellevue College",
@@ -108,7 +111,7 @@ func (r *ResumeStruct) AddEducation() []Education {
 		Dates:  "2007 - 2011",
 	}
 	educ5 := Education{
-		School: "Northway Aviation",
+		School: "FAA",
 		Topics: "Private Pilot Certificate",
 		Dates:  "2011",
 	}

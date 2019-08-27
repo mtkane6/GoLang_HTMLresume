@@ -1,0 +1,14 @@
+/* Links */
+a {
+    color: crimson
+}
+a:hover {
+    color: yellow
+}
+
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: lightblue;
+}
